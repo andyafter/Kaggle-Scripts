@@ -1,5 +1,7 @@
 from readers.reader import DataReader
 
+
+
 a = DataReader()
 
 crime_time= {}
@@ -16,3 +18,13 @@ for des in a.train.Descript:
         description[des] =1
     else:
         description[des] += 1
+
+words = {}
+for des in description:
+    l = des.split()
+    for w in l:
+        word = w.strip(',')
+        if word not in words:
+            words[word] = 1
+        else :
+            words[word] += 1

@@ -12,9 +12,17 @@ from matplotlib.backends.backend_pdf import PdfPages
 
 class DataReader():
     def __init__(self):
-        pass
+        self.drive = '../input/'
+        self.z = zipfile.ZipFile(self.drive+'train.csv.zip')
+        self.train = pd.read_csv(self.z.open('train.csv'))
+        self.cats = list(set(self.train.Category))
+
     def read(self):
-        drive = '../input/'
-        z = zipfile.ZipFile(drive+'train.csv.zip')
-        train = pd.read_csv(z.open('train.csv'))
-        print "success"
+        pass
+
+    def get_column_names(self):
+
+        pass
+
+    def get_categories(self):
+        return self.cats

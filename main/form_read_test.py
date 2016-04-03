@@ -9,3 +9,10 @@ for date in a.train.Dates:
         crime_time[time] = 1
     else:
         crime_time[time] += 1
+
+description = {}
+for des in a.train.Descript:
+    if des not in description:
+        description[des] =1
+    else:
+        description[des] += 1

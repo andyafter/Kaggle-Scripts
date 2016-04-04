@@ -3,7 +3,7 @@ python:
   - "2.6"
   - "2.7"
 # command to install dependencies
-script: python test/basic_tests.py
+script: python tests/basic_tests.py
 branches:
   only:
     - master

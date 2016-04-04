@@ -1,6 +1,4 @@
-test/*.png
-test/*.r
-test/test.*
+test/
 input/sampleSubmission.csv
 input/test.csv
 input/train.csv

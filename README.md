@@ -9,3 +9,4 @@ One of the kaggle stuff.
 | Day        | Date           | Description  |
 | ------------- |:-------------:| :-----|
 | Sunday | 3rd April | Taking care of some basic statistics. Should handle classfication of description first |
+| Monday | 4th April | Added TravisCI, and cleaned code. |

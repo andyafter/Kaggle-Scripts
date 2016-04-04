@@ -17,12 +17,10 @@ class DataReader():
         self.train = pd.read_csv(self.z.open('train.csv'))
         self.cats = list(set(self.train.Category))
 
-    def read(self):
-        pass
-
     def get_column_names(self):
-
-        pass
+        names = []
+        for name in self.train:
+            names.append(name)
 
     def get_categories(self):
         return self.cats
@@ -32,8 +30,7 @@ class DataReader():
         Returns a generator for raw information: Dates, Category, Descript DayOfWeek,
         PdDistrict, Resolution Address X Y
         '''
-        length = len(self.train.Category)
-        for i in range(length):
+        for i in range(self.get_length()):
             raw = self.get_raw(i)
             yield raw
 

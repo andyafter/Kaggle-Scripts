@@ -26,3 +26,22 @@ class DataReader():
 
     def get_categories(self):
         return self.cats
+
+    def get_raws(self):
+        '''
+        Returns a generator for raw information: Dates, Category, Descript DayOfWeek,
+        PdDistrict, Resolution Address X Y
+        '''
+        length = len(self.train.Category)
+        for i in range(length):
+            raw = {}
+            raw['date'] = self.train.Dates[i]
+            raw["category"] = self.train.Category[i]
+            raw["description"] = self.train.Descript[i]
+            raw["day"] = self.train.DayOfWeek[i]
+            raw["pddistrict"] = self.train.PdDistrict[i]
+            raw["resolution"] = self.train.Resolution[i]
+            raw["address"] = self.train.Address[i]
+            raw["x"] = self.train.X[i]
+            raw["y"] = self.train.Y[i]
+            yield raw

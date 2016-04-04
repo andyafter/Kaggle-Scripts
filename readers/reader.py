@@ -34,14 +34,26 @@ class DataReader():
         '''
         length = len(self.train.Category)
         for i in range(length):
-            raw = {}
-            raw['date'] = self.train.Dates[i]
-            raw["category"] = self.train.Category[i]
-            raw["description"] = self.train.Descript[i]
-            raw["day"] = self.train.DayOfWeek[i]
-            raw["pddistrict"] = self.train.PdDistrict[i]
-            raw["resolution"] = self.train.Resolution[i]
-            raw["address"] = self.train.Address[i]
-            raw["x"] = self.train.X[i]
-            raw["y"] = self.train.Y[i]
+            raw = self.get_raw(i)
             yield raw
+
+    def get_length(self):
+        return len(self.train.Category)
+
+    def get_raw(self, num):
+        '''
+        Get raw by line number
+        '''
+        raw={}
+        if num<0 or num>self.get_length():
+            return raw
+        raw['date'] = self.train.Dates[num]
+        raw["category"] = self.train.Category[num]
+        raw["description"] = self.train.Descript[num]
+        raw["day"] = self.train.DayOfWeek[num]
+        raw["pddistrict"] = self.train.PdDistrict[num]
+        raw["resolution"] = self.train.Resolution[num]
+        raw["address"] = self.train.Address[num]
+        raw["x"] = self.train.X[num]
+        raw["y"] = self.train.Y[num]
+        return raw

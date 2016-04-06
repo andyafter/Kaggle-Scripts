@@ -1,4 +1,2 @@
-import os, sys
-
-
+assert 1==2
 print "Basic Testing!!"

@@ -5,3 +5,4 @@ input/train.csv
 input/train.csv.zip
 *.swp
 *.pyc
+input/test.*

@@ -1,0 +1,6 @@
+# I will do something about here later
+# tensorflow is also required actually
+numpy
+scipy
+pandas
+matplotlib

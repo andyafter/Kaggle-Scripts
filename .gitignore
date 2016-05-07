@@ -1,8 +1,7 @@
 test/
 input/sampleSubmission.csv
-input/test.csv
-input/train.csv
-input/train.csv.zip
+input/sf_crime/*
+*.csv
 *.swp
 *.pyc
 input/test.*

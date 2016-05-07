@@ -20,3 +20,5 @@ class TickerData(object):
         all_tick_data = all_tick.read()
         return all_tick_data
 
+    def wss_tick(self):
+        return []

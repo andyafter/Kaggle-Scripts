@@ -1,3 +1,6 @@
 #+TITLE Machine Learning Notes(Coursera)
 
-* 
+* Training(person)
+
+** Convolutional Neural Network
+Implementation of a simple CNN with python. 

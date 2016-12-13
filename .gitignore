@@ -5,3 +5,4 @@ input/sf_crime/*
 *.swp
 *.pyc
 input/test.*
+input/*
